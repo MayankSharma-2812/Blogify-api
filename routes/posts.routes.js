@@ -1,12 +1,8 @@
 import { Router } from "express";
+import { getAllPosts } from "../controllers/posts.controller.js";
 
 const router = Router();
 
-// GET /api/v1/posts
-router.get("/", (req, res) => {
-  res.json({
-    message: "All blog posts",
-  });
-});
+router.get("/", getAllPosts);
 
 export default router;
